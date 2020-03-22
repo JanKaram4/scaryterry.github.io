@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="hamada"> </h1>
+<label for="fname"> Enter your first name</label> <input name="fname" id="fname" type="text"> <br>
+<label for="fname"> Enter your last name</label> <input name="lname" id="lname" type="text"> <br>
+<button id="myBtn" > click here</button> <br>
+<p id="result"> </p>
+
+<script>
+    document.getElementById("myBtn").addEventListener("click", function(){
+        let fname = document.getElementById("fname").value;
+        console.log(fname);
+        let lname = document.getElementById("lname").value;
+        console.log(lname);
+        let result1 = "your name is" + " " + fname + " " + lname ;
+        console.log(result1);
+        document.getElementById("result").innerHTML = result1 ;
+        let x = prompt('enter your name daaaaah');
+        let y = prompt('enter your age');
+        let age = 1 + Number(y);
+        alert('your name is ' + x + ', next year you will be' + age + ' year' );
+    });
+</script>
+</body>
+</html>

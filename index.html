@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my calculator</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        body{ background: #61aaff; padding: 2px 2px 2px 2px; margin: 2px 2px 2px 2px;}
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row"> <label for="no1" class="col-2" > Enter your first no</label><input type="text" id="no1" class="col-10"> </div>
+    <br>
+<div class="row"> <label for="no2"  class="col-2"> Enter your second no</label><input type="text" id="no2" class="col-10"> </div>
+    <br>
+    <div class="row">
+<input type="button" id="sum" value="+" class="col">
+<input type="button" id="sub" value="-" class="col">
+<input type="button" id="times" value="X" class="col">
+<input type="button" id="divi" value="/" class="col">
+    </div>
+    <br>
+<h1 id="res"></h1>
+    <img alt="Scary terry saying bitch!" src="download.jpg" style="display: none;" id="myimg">
+</div>
+<script>
+    document.getElementById("sum").addEventListener("click",function () {
+        let x = document.getElementById("no1").value;
+        let y = document.getElementById("no2").value;
+        let sum = Number(x) + Number(y);
+        if (isNaN(sum)) {document.getElementById("res").innerHTML="Enter numbers only!";
+            document.getElementById("myimg").style.display="block";}
+        else {document.getElementById("res").innerHTML="your sum is " + sum ;
+            document.getElementById("myimg").style.display="none";}
+    });
+    document.getElementById("sub").addEventListener("click",function () {
+        let x = document.getElementById("no1").value;
+        let y = document.getElementById("no2").value;
+        let sub = Number(x) - Number (y) ;
+        if (isNaN(sub)) {document.getElementById("res").innerHTML="Enter numbers only!"; }
+        else {document.getElementById("res").innerHTML="your sum is " + sub ;
+            document.getElementById("myimg").style.display="none";}
+    });
+    document.getElementById("times").addEventListener("click",function () {
+        let x = document.getElementById("no1").value;
+        let y = document.getElementById("no2").value;
+        let times = Number(x) * Number(y);
+        if (isNaN(times)) {document.getElementById("res").innerHTML="Enter numbers only!"; }
+        else {document.getElementById("res").innerHTML="your sum is " + times ;
+            document.getElementById("myimg").style.display="none";}
+    });
+    document.getElementById("divi").addEventListener("click",function () {
+        let x = document.getElementById("no1").value;
+        let y = document.getElementById("no2").value;
+        let divi = Number(x) / Number(y);
+        if (isNaN(divi)) {document.getElementById("res").innerHTML="Enter numbers only!"; }
+        else {document.getElementById("res").innerHTML="your sum is " + divi ;
+            document.getElementById("myimg").style.display="none";}
+    });
+</script>
+</body>
+</html>
